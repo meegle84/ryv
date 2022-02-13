@@ -24,12 +24,15 @@ def get_random_id():
 def is_valid_random_id(id):
     return is_url_ok(YT + YT_WATCH_QUERY + id)
 
+def is_valid_random_id_oembed(id):
+    return is_url_ok(YT + OEMBED_QUERY + YT + YT_WATCH_QUERY + id)
+
 def get_valid_random_id():
     valid_id = False
     while not valid_id:
         random_id = get_random_id()
         print(random_id)
-        valid_id = is_valid_random_id(random_id)
+        valid_id = is_valid_random_id_oembed(random_id)
         print(valid_id)
     else:
         return random_id
