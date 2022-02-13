@@ -8,6 +8,8 @@ DEFAULT_ID = 'G1IbRujko-A'
 ALTERNATE_ID = 'jbauqKIApoA'
 
 app = Flask(__name__)
+app.config['development'] = True
+app.config['SECRET_KEY'] = DEFAULT_ID
 
 # define homage
 @app.route('/', methods=['GET'])
