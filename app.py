@@ -10,7 +10,11 @@ app = Flask(__name__)
 # define homage
 @app.route('/', methods=['GET'])
 def homepage():
-    return render_template('index.html', youtube_id=DEFAULT_ID)
+    return render_template('index.html', link_id=DEFAULT_ID, youtube_id=DEFAULT_ID)
+
+@app.route('/<id>', methods=['GET'])
+def id(id):
+    return render_template('index.html', link_id=id, youtube_id=id)
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
