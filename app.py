@@ -50,7 +50,6 @@ def id(id):
 
 @app.route('/reload/', methods=['POST'])
 def reload_clicked():
-    app.logger.info('reload')
     return redirect('/')
 
 @app.route('/random/', methods=['POST', 'GET'])
