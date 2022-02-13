@@ -7,3 +7,4 @@
 [Making a simple Flask app for viewing YouTube videos](http://www.compjour.org/lessons/flask-single-page/simple-youtube-viewing-flask-app/)
 
 ## extras
+[oembed](https://oembed.com/)
